@@ -31,7 +31,7 @@ def is_missing(values, param):
 end
 
 # Useful command to build the list of required parameters:
-# awk '-F|' '$4 == " Yes " { printf("%s\n", gensub(/\s+/, "", "g", $2)) }' docs/platform_operators/deploy-parameters.md
+# awk '-F|' '$4 == " Yes " { printf("%s\n", gensub(/\s+/, "", "g", $2)) }' docs/platform_operators/config-values.md
 
 def get_missing_parameters(values):
     required_parameters = '''\
@@ -46,7 +46,6 @@ capi.cf_api_controllers_client_secret
 capi.database.encryption_key
 capi.database.password
 cf_admin_password
-cf_db.admin_password
 internal_certificate.ca
 internal_certificate.crt
 internal_certificate.key
